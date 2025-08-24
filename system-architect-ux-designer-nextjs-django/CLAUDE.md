@@ -119,12 +119,14 @@ This project uses a comprehensive agent-based development workflow that covers t
 │   │   ├── system-architect.md
 │   │   ├── ux-designer.md
 │   │   ├── staff-ux-designer.md
+│   │   ├── ui-ux-prototyping-specialist.md
 │   │   ├── senior-software-engineer.md
 │   │   ├── qa-automation-engineer.md
 │   │   └── engineering-manager.md
 │   └── commands/           # Workflow command scripts
 │       ├── backlog-planning.md
 │       ├── design-phase.md
+│       ├── prototype-creation.md
 │       ├── implementation-phase.md
 │       ├── delivery-phase.md
 │       ├── workflow-status.md
@@ -156,13 +158,14 @@ This project uses a comprehensive agent-based development workflow that covers t
 This project includes a comprehensive `.claude/` directory structure that defines the development workflow system:
 
 ### Agent System
-- **Specialized Agents**: 7 persona-based agents with specific roles and capabilities
+- **Specialized Agents**: 8 persona-based agents with specific roles and capabilities
 - **Agent Configuration**: Detailed agent definitions in `.claude/agents/` directory
 - **Slash Commands for Workflow**: Commands that kick off the different phases of the implementation workflow
 
 ### Workflow Commands
 - **backlog-planning**: Analyze requirements and create structured GitHub Issues with epics and user stories
 - **design-phase**: Execute UI/UX design creation and review process
+- **prototype-creation**: Create high-fidelity mockups and interactive prototypes
 - **implementation-phase**: Manage TDD implementation with quality assurance
 - **delivery-phase**: Handle PR creation, CI resolution, and final review
 
@@ -171,6 +174,7 @@ This project includes a comprehensive `.claude/` directory structure that define
 - **System Architect**: Technical planning, architecture decisions, risk assessment
 - **Senior UX Designer**: User experience design, prototyping, accessibility compliance
 - **Staff UX Designer**: Design review, quality assurance, standards enforcement
+- **UI/UX Prototyping Specialist**: High-fidelity mockups, interactive prototypes, pixel-perfect design specifications
 - **Senior Software Engineer**: Full-stack implementation (Next.js/React frontend, Django/Python backend), testing, performance optimization
 - **QA Automation Engineer**: Playwright E2E testing, test automation strategy, accessibility and performance validation
 - **Engineering Manager**: Code review, quality standards, technical leadership
