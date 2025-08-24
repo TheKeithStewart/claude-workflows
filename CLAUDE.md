@@ -15,12 +15,17 @@ This is a collection of specialized AI agent workflows designed for different pr
 ├── README.md                    # Repository overview and purpose
 ├── {workflow-name}/             # Individual workflow directories
 │   ├── CLAUDE.md               # Workflow-specific Claude guidance
-│   ├── scratchpads/            # Working documents during development
+│   ├── plans/                  # Issue-specific planning documents
 │   │   ├── README.md           # File naming conventions and lifecycle
-│   │   ├── {issue-number}-technical-plan.md
-│   │   ├── {issue-number}-designs.md
-│   │   ├── {issue-number}-implementation-log.md
-│   │   └── {issue-number}-review-feedback.md
+│   │   └── issue-{number}-{description}/
+│   │       ├── technical-plan.md
+│   │       ├── designs.md
+│   │       ├── implementation-log.md
+│   │       ├── review-feedback.md
+│   │       └── assets/
+│   │           ├── mockups/
+│   │           ├── wireframes/
+│   │           └── prototypes/
 │   └── templates/              # Document templates for workflow phases
 │       ├── technical-plan-template.md
 │       ├── design-document-template.md
@@ -71,11 +76,11 @@ No universal build/test commands as this is a documentation repository. Each wor
 
 ## File Lifecycle Management
 
-### Scratchpad Documents
-- **Active Issues**: Maintained in workflow's `scratchpads/` directory
+### Planning Documents
+- **Active Issues**: Maintained in workflow's `plans/` directory, organized by issue
 - **File Ownership**: Each document is owned by the creating persona
 - **Review Process**: Other personas provide feedback but don't directly modify
-- **Archival**: Completed issues moved to timestamped subdirectories
+- **Archival**: Completed issues moved to `archived/{year}/{quarter}/` subdirectories
 
 ### Templates
 - **Standardization**: Consistent structure across all workflow types

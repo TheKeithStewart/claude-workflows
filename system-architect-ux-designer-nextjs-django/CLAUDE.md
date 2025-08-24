@@ -136,11 +136,16 @@ This project uses a comprehensive agent-based development workflow that covers t
 │   ├── design-document-template.md
 │   ├── implementation-log-template.md
 │   └── review-feedback-template.md
-├── scratchpads/            # Working documents for active issues
-│   ├── {issue-number}-technical-plan.md
-│   ├── {issue-number}-designs.md
-│   ├── {issue-number}-implementation-log.md
-│   └── {issue-number}-review-feedback.md
+├── plans/                  # Issue-specific planning documents
+│   ├── issue-{number}-{description}/
+│   │   ├── technical-plan.md
+│   │   ├── designs.md
+│   │   ├── implementation-log.md
+│   │   ├── review-feedback.md
+│   │   └── assets/
+│   │       ├── mockups/
+│   │       ├── wireframes/
+│   │       └── prototypes/
 ├── frontend/               # Next.js application
 └── backend/                # Django application
 ```
@@ -178,5 +183,12 @@ This project includes a comprehensive `.claude/` directory structure that define
 - **Senior Software Engineer**: Full-stack implementation (Next.js/React frontend, Django/Python backend), testing, performance optimization
 - **QA Automation Engineer**: Playwright E2E testing, test automation strategy, accessibility and performance validation
 - **Engineering Manager**: Code review, quality standards, technical leadership
+
+### Document Organization
+
+All planning documents are organized by GitHub issue in the `plans/` directory:
+- Each issue gets its own subdirectory: `issue-{number}-{description}/`
+- Core documents: `technical-plan.md`, `designs.md`, `implementation-log.md`, `review-feedback.md`
+- Design assets organized in `assets/` subdirectory with `mockups/`, `wireframes/`, and `prototypes/` folders
 
 The workflow system coordinates these agents to ensure comprehensive planning, design, implementation, and delivery with consistent quality standards.

@@ -194,11 +194,12 @@ The system provides **flexible workflow paths** depending on your needs:
 - `implementation-log-template.md` - Development progress and decision tracking
 - `review-feedback-template.md` - Structured feedback and iteration management
 
-**Working Documents** (`/scratchpads/` directory):
-- `{issue-number}-technical-plan.md` - Technical architecture and implementation strategy
-- `{issue-number}-designs.md` - Design options, specifications, and stakeholder selections
-- `{issue-number}-implementation-log.md` - Development progress, decisions, and technical notes
-- `{issue-number}-review-feedback.md` - Review cycles, feedback resolution, and approval tracking
+**Working Documents** (`/plans/issue-{number}-{description}/` directories):
+- `technical-plan.md` - Technical architecture and implementation strategy
+- `designs.md` - Design options, specifications, and stakeholder selections
+- `implementation-log.md` - Development progress, decisions, and technical notes
+- `review-feedback.md` - Review cycles, feedback resolution, and approval tracking
+- `assets/` - Design assets organized by type (mockups, wireframes, prototypes)
 
 ## Key Benefits
 
