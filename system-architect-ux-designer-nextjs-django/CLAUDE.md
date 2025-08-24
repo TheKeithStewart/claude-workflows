@@ -107,42 +107,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000
 
 ## Development Workflow
 
-This project follows a structured 19-step development workflow involving multiple specialized personas. The workflow ensures comprehensive planning, design, implementation, and review for all features.
-
-### Workflow Overview
-
-The development process follows these phases:
-1. **Planning & Analysis** (Steps 1-5): Issue analysis, technical planning, plan review and iteration
-2. **Design** (Steps 6-10): UI design, design review, stakeholder approval
-3. **Implementation** (Steps 11-16): TDD implementation, quality assurance, code review
-4. **Delivery** (Steps 17-19): PR creation, CI resolution, final review
-
-### Key Documents
-
-- **WORKFLOW.md**: Complete 19-step process documentation
-- **PERSONAS.md**: Detailed agent personas and their responsibilities
-- **Templates**: Document templates in `/templates/` directory
-- **Scratchpads**: Working documents in `/scratchpads/` directory
-
-### Personas Involved
-
-- **System Architect**: Technical planning and architecture decisions
-- **Senior UX Designer**: User experience design and prototyping
-- **Staff UX Designer**: Design review and quality assurance
-- **Senior Software Engineers**: Frontend and backend implementation
-- **Engineering Manager**: Code review and engineering standards
-
-### Starting a New Feature
-
-To begin work on a GitHub issue using this workflow:
-
-1. **Issue Analysis**: Read and understand the GitHub issue requirements
-2. **Create Technical Plan**: System Architect creates plan in `/scratchpads/{issue-number}-technical-plan.md`
-3. **Plan Review**: Get technical plan reviewed and approved
-4. **Design (if UI changes)**: Create design options in `/scratchpads/{issue-number}-designs.md`
-5. **Implementation**: Follow TDD approach with comprehensive testing
-6. **Quality Assurance**: Ensure all tests pass, no lint issues, proper documentation
-7. **Review & PR**: Code review, PR creation, and final approval
+This project uses a comprehensive agent-based development workflow that covers the entire product lifecycle from requirements analysis to feature delivery.
 
 ### File Organization
 
@@ -164,8 +129,6 @@ To begin work on a GitHub issue using this workflow:
 │       ├── delivery-phase.md
 │       ├── workflow-status.md
 │       └── workflow-utils.md
-├── WORKFLOW.md              # Complete workflow documentation
-├── PERSONAS.md              # Agent personas and responsibilities
 ├── templates/               # Document templates
 │   ├── technical-plan-template.md
 │   ├── design-document-template.md
@@ -180,37 +143,13 @@ To begin work on a GitHub issue using this workflow:
 └── backend/                # Django application
 ```
 
-### Quality Gates
+### Quality Standards
 
-Every deliverable must pass domain-specific quality gates:
-- **Technical Plans**: Architecture soundness, security, performance, feasibility
-- **Designs**: Usability, accessibility (WCAG 2.1 AA), design system compliance
-- **Implementation**: 90%+ test coverage, lint-free, security compliant, performance optimized
-
-### Commands for Quality Assurance
-
-Before any PR creation, run these commands to ensure quality:
-
-```bash
-# Frontend quality checks
-cd frontend
-npm run lint                # ESLint checking
-npm run type-check         # TypeScript type checking  
-npm test                   # Unit tests
-npm run build             # Production build test
-
-# Backend quality checks
-cd backend
-python -m flake8          # Code linting
-python -m black --check . # Code formatting check
-python manage.py test     # Unit tests
-python manage.py check    # Django system checks
-
-# E2E tests (when implemented)
-npx playwright test       # End-to-end tests
-```
-
-All quality checks must pass before requesting final PR review.
+- **Code Quality**: ESLint/Prettier (frontend), Black/flake8 (backend), TypeScript strict mode
+- **Testing**: 90%+ test coverage with unit, integration, and E2E tests
+- **Accessibility**: WCAG 2.1 AA compliance for all UI components
+- **Performance**: Core Web Vitals optimization and API response benchmarks
+- **Security**: OWASP compliance with comprehensive input validation
 
 ## Claude Code Workflow System
 
@@ -219,33 +158,13 @@ This project includes a comprehensive `.claude/` directory structure that define
 ### Agent System
 - **Specialized Agents**: 7 persona-based agents with specific roles and capabilities
 - **Agent Configuration**: Detailed agent definitions in `.claude/agents/` directory
-- **Workflow Orchestration**: Intelligent agent coordination for complex development tasks
+- **Slash Commands for Workflow**: Commands that kick off the different phases of the implementation workflow
 
 ### Workflow Commands
 - **backlog-planning**: Analyze requirements and create structured GitHub Issues with epics and user stories
 - **design-phase**: Execute UI/UX design creation and review process
 - **implementation-phase**: Manage TDD implementation with quality assurance
 - **delivery-phase**: Handle PR creation, CI resolution, and final review
-- **workflow-status**: Monitor active workflows and provide progress reports
-- **workflow-utils**: Utility functions for workflow management and maintenance
-
-### Getting Started with Workflow
-
-**For Backlog Planning:**
-Create structured user stories and GitHub Issues from requirements:
-```
-"Please analyze and create a backlog for: user dashboard with analytics and reporting"
-```
-
-**For Feature Development:**
-Start the development workflow for existing GitHub issues:
-```
-"Start the development workflow for GitHub issue #123"
-```
-or
-```
-"I have this feature requirement: [description]. Please start the development workflow."
-```
 
 ### Agent Capabilities
 - **Product Manager**: User story creation, backlog management, requirements analysis, stakeholder coordination
@@ -256,4 +175,4 @@ or
 - **QA Automation Engineer**: Playwright E2E testing, test automation strategy, accessibility and performance validation
 - **Engineering Manager**: Code review, quality standards, technical leadership
 
-The workflow system automatically coordinates these agents through the 19-step process, ensuring comprehensive planning, design, implementation, and delivery with consistent quality standards.
+The workflow system coordinates these agents to ensure comprehensive planning, design, implementation, and delivery with consistent quality standards.
